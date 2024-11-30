@@ -1,9 +1,11 @@
 "use client"
 
-import { Bars4Icon, FilmIcon, FolderArrowDownIcon, ShoppingCartIcon, UserCircleIcon, XCircleIcon } from "@heroicons/react/16/solid"
+import { Bars4Icon, XCircleIcon } from "@heroicons/react/16/solid"
 import React, { useState } from "react"
 import Backdrop from "./Backdrop"
 import SingleMenu from "./SingleMenu"
+
+
 
 interface Item {
     title: string;
@@ -11,41 +13,10 @@ interface Item {
     icon?: JSX.Element;
 }
 interface ItemProps {
-    item: Item;
+    menuItems: Item[];
 }
-const menuItems: Item[] = [
-    {
-        title: "فیلم معرفی",
-        link: "/",
-        icon: <FilmIcon className="fill-black w-8 aspect-square" />
-    },
-    {
-        title: "محصولات و خدمات",
-        link: "/",
-    },
-    {
-        title: "تماس با ما",
-        link: "/",
-    },
-    {
-        title: "دانلود اپلیکیشن",
-        link: "/",
-        icon: <FolderArrowDownIcon className="fill-black w-8 aspect-square" />
-    },
-    {
-        title: " سبد سفارش",
-        link: "/",
-        icon: <ShoppingCartIcon className="fill-black w-8 aspect-square" />
-    },
-    {
-        title: "ورود|ثبت نام",
-        link: "/",
-        icon: <UserCircleIcon className="fill-black w-8 aspect-square" />
-    },
 
-]
-
-const MobileMenu: React.FC = () => {
+const MobileMenu: React.FC<ItemProps> = ({ menuItems }) => {
     const [isOpenDrawer, setIsOpenDrawer] = useState(false)
 
     const toggleMenu = () => {
@@ -55,7 +26,7 @@ const MobileMenu: React.FC = () => {
     return (<>
 
         <button onClick={toggleMenu}>
-            <Bars4Icon className="fill-black w-10 aspect-square" />
+            <Bars4Icon className="fill-black w-10 aspect-square lg:hidden" />
         </button>
 
         {isOpenDrawer && <Backdrop click={toggleMenu} />}
