@@ -33,7 +33,7 @@ const footerItems = {
 }
 
 const Footer = () => {
-    return (<footer className="bg-primary-900 text-white px-8 pb-20 pt-10 relative w-full h-fit">
+    return (<footer className="bg-primary-900 text-white px-8 pb-20 pt-10 relative w-full h-fit overflow-hidden">
         <aside className="flex max-w-7xl mx-auto gap-10 justify-between mb-6">
             <article className="basis-2/5">
                 <h3 className="text-2xl mb-6 font-bold">
@@ -71,6 +71,7 @@ const Footer = () => {
         <aside className="mt-3">
             <span>{footerItems.copyright}</span>
         </aside>
+        <div className="border-b-primary-600/20 border-b-[68vw] border-r-[50vw] border-r-transparent w-2/3 h-full absolute top-0 end-0 before:absolute before:w-28 before:aspect-[1/13] before:-top-40 before:-start-[120%] before:2xl:-start-3/4 before:bg-primary-600/70 before:rotate-[-35deg]"></div>
     </footer>
     )
 }
