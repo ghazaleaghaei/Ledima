@@ -50,7 +50,10 @@ const Footer = () => {
                 <ul className="font-medium text-lg flex flex-col gap-3">
                     {
                         footerItems.quickAccess.items.map((item, index) => <li key={index}>
-                            <a>
+                            <a
+                                aria-label={item.title}
+                                href={item.link}
+                            >
                                 {item.title}
                             </a>
                         </li>)
@@ -67,8 +70,8 @@ const Footer = () => {
                 </ul>
             </article>
         </aside>
-        <hr />
-        <aside className="mt-3">
+        <hr className="max-w-7xl mx-auto" />
+        <aside className="mt-3 max-w-7xl mx-auto">
             <span>{footerItems.copyright}</span>
         </aside>
         <div className="border-b-primary-600/20 border-b-[68vw] border-r-[50vw] border-r-transparent w-2/3 h-full absolute top-0 end-0 before:absolute before:w-28 before:aspect-[1/13] before:-top-40 before:-start-[120%] before:2xl:-start-3/4 before:bg-primary-600/70 before:rotate-[-35deg]"></div>

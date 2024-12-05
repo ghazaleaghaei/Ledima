@@ -10,22 +10,22 @@ const hero = {
     categories: [
         {
             title: "انواع چاپ",
-            icon: <NewspaperIcon className="w-8 aspect-square stroke-primary-900" />,
+            icon: <NewspaperIcon className="w-8 aspect-square stroke-primary-600" />,
             link: "/",
         },
         {
             title: "هدایای تبلیغاتی",
-            icon: <GifIcon className="w-8 aspect-square stroke-primary-900" />,
+            icon: <GifIcon className="w-8 aspect-square stroke-primary-600" />,
             link: "/",
         },
         {
             title: "طراحی تخصصی",
-            icon: <PhotoIcon className="w-8 aspect-square stroke-primary-900" />,
+            icon: <PhotoIcon className="w-8 aspect-square stroke-primary-600" />,
             link: "/",
         },
         {
             title: "چندرسانه ای",
-            icon: <VideoCameraIcon className="w-8 aspect-square stroke-primary-900" />,
+            icon: <VideoCameraIcon className="w-8 aspect-square stroke-primary-600" />,
             link: "/",
         },
     ]

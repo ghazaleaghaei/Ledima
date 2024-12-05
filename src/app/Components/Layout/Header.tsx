@@ -47,13 +47,15 @@ const menuItems: Item[] = [
 const Header = ({
 
 }) => {
-    return <header className="shadow-lg shadow-secondary-400 h-fit p-4 flex w-full justify-between max-w-7xl mx-auto">
-        <div className="flex gap-3 items-center text-xl">
-            <div className="w-10 aspect-square bg-primary-900" />
-            <strong>لدیما</strong>
+    return <header className="shadow-lg shadow-secondary-400 h-fit p-4">
+        <div className="flex w-full justify-between max-w-7xl mx-auto">
+            <div className="flex gap-3 items-center text-xl">
+                <div className="w-10 aspect-square bg-primary-900" />
+                <strong>لدیما</strong>
+            </div>
+            <MobileMenu menuItems={menuItems} />
+            <DesktopMenu menuItems={menuItems} />
         </div>
-        <MobileMenu menuItems={menuItems} />
-        <DesktopMenu menuItems={menuItems} />
     </header>
 }
 
