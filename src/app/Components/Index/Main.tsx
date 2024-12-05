@@ -34,8 +34,9 @@ const Main = () => {
                     <Image
                         src={item.imageUrl}
                         alt={item.title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </figure>
             </article>)}
